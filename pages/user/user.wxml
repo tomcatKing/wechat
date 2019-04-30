@@ -1,0 +1,52 @@
+<!--pages/user/user.wxml-->
+<view class="header-container">
+  <view class="user-body">
+    <image src="{{avatarUrl}}"/>
+  </view>
+  <view class="user-name">
+    {{user_name}}
+  </view>
+</view>
+
+<!--订单介绍-->
+<view class="order-container">
+  <view class="order-title">我的订单</view>
+  <view class="order-other" data-select="all" bindtap='onSelectEvent'>
+    <view class="order-text">全部订单</view>
+    <image src="../../img/更多(1).png"/>
+  </view>
+</view>
+
+<!--选择图标-->
+<view class="select-container">
+  <view class="select-item" data-select="dfk" bindtap='onSelectEvent'>
+    <image src="../../img/待付款.png"/>
+    <text>待付款</text>
+  </view>
+
+   <view class="select-item" data-select="dfh" bindtap='onSelectEvent'>
+    <image src="../../img/待发货.png"/>
+    <text>待发货</text>
+  </view>
+
+   <view class="select-item" data-select="dsh" bindtap='onSelectEvent'>
+    <image src="../../img/待收货.png"/>
+    <text>待收货</text>
+  </view>
+
+   <view class="select-item" data-select="dpj" bindtap='onSelectEvent'>
+    <image src="../../img/待评价.png"/>
+    <text>待评价</text>
+  </view>
+</view>
+<view class="context">
+  <view class="inner-context">
+     注意：本小程序仅用于外卖订单的项目的演示！所有商品均为虚拟商品，且不会有真实交易产生！请放心使用,另外:支付方面使用的是支付宝的当面支付.支付环境未沙箱环境.如果需要测试支付效果.请使用沙箱版支付包进行支付.
+
+     谢谢您的使用!!
+
+     <view style="color:#12b1d7;padding-top:100rpx;">作者:tomcatBbzzzs,微信:a1450160028</view> 
+  </view>
+</view>
+
+

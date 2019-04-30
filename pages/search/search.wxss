@@ -1,0 +1,30 @@
+/* pages/search/search.wxss */
+.item-list-group{
+  padding:10rpx 20rpx;
+}
+.item-list-group .item-group{
+  padding:10rpx 0rpx;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+.item-group .thumbnail{
+  width:80rpx;
+  height:100rpx;
+  margin-right:20rpx;
+}
+.item-group .info-group{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-group .title{
+  font-size: 32rpx;
+}
+
+.info-group .rate-year{
+  font-size: 28rpx;
+  color:#7b7b7b;
+}
+

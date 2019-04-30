@@ -1,0 +1,105 @@
+<!--pages/buy/buy.wxml-->
+<view class="edit-c-address" hidden="{{!is_select_address}}">
+  <view class="section">
+    <view class="section__title" wx:if="{{is_add_address}}">添加收货地址</view>
+    <view class="section__title" wx:else>编辑收货地址</view>
+
+    <!--收件人-->
+    <view class="item-receiver-name">
+      <view class="inner-receiver-name">收件人</view>
+      <view class="inner-name-input">
+        <input type="text" focus='{{rec_name}}' value='{{rec_name_val}}' bindblur='onBlurEvent' data-val="rec_name"></input>
+      </view>
+    </view>
+    <!--联系电话-->
+    <view class="item-receiver-name">
+      <view class="inner-receiver-name">联系电话</view>
+      <view class="inner-name-input">
+        <input type="text" focus='{{rec_phone}}' bindblur='onBlurEvent' data-val="rec_phone" value='{{rec_phone_val}}'></input>
+      </view>
+    </view>   
+    <!--地区-->
+    <view class="item-receiver-name">
+      <view class="inner-receiver-name">收件地址</view>
+      <view class="inner-name-input">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" class="picker">
+          <view class="picker-text">
+            <text style="color:#3ef602">{{region[0]}}</text> 
+            | 
+            <text style="color:#f6a002">{{region[1]}}</text> 
+            | 
+            <text style="color:#f63a02">{{region[2]}}</text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="item-receiver-name">
+      <view class="inner-receiver-name">详细地址</view>
+      <view class="inner-name-input">
+        <input type="text" focus='{{rec_address}}' bindblur='onBlurEvent' data-val="rec_address" value='{{rec_address_val}}'></input>
+      </view>
+    </view>
+    <view class="item-receiver-button" wx:if="{{is_add_address}}" bindtap="onReturnEvent">返      回</view>
+    <view class="item-receiver-button" wx:if="{{is_add_address}}" bindtap="onAddAddressEvent">添 加 地 址</view>
+    <view class="item-receiver-button" wx:if="{{is_update_address}}" bindtap="onReturnEvent" data-id="{{update_shipping_id}}">返      回</view>
+    <view class="item-receiver-button" wx:if="{{is_update_address}}" bindtap="onUpdateAddressEvent" data-id="{{update_shipping_id}}">更 新 地 址</view>
+  </view>
+</view>
+
+<view hidden="{{is_select_address}}">
+  <view class="header-container">
+    <view class="header-buy-title">购物清单</view>
+    <view class="header-cart-body" wx:for="{{carts}}" wx:key="{{item.cart_id}}">
+      <view class="cart-msg">
+        <view class="cart-image">
+          <image src="{{item.food_img}}"/>
+        </view>
+        <view class="cart-name">
+          <text>{{item.food_name}}</text>
+          <text class="cart-price">￥{{item.food_price}}</text>
+        </view>
+      </view>
+      <view class="cart-buy-num">x{{item.food_num}}</view>
+    </view>
+  </view>
+
+  <!--收货地-->
+  <view class="body-container">
+    <view class="body-address-title">收货地址</view>
+    <!--收货地址选择-->
+    <view class="body-address">
+      <view style="border:{{shipping_id == item.shipping_id ? '1px solid #5cace2' :'1px solid #fff'}}" bindtap="onSelectShoppingEvent" class="address" wx:for="{{shippings}}" wx:key="{{item.shipping_id}}" data-id="{{item.shipping_id}}">
+        <view class="view-address">{{item.receiver_province}}省{{item.receiver_city}}市{{receiver_district}}(区/县){{item.receiver_address}}</view>
+        <view class="update-address" data-id="{{item.shipping_id}}" bindtap="onShippingEvent" data-type="edit"><image src="../../img/编辑(1).png"/></view>
+        <view class="delete-address" data-id="{{item.shipping_id}}" bindtap="onShippingEvent" data-type="del"><image src="../../img/删除.png"/></view>
+      </view>
+      <view class="add-address-btn">
+      <button type="primary" size="mini" bindtap="transAddEvent"
+  >添加收货地址</button>
+      </view>
+    </view>
+  </view>
+
+  <!--留言-->
+  <view class="body-container">
+    <view class="body-address-title">留言</view>
+    <!--收货地址选择-->
+    <view class="body-address">
+      <input class="address-input" placeholder='选填:给商家留言(100字以内)' placeholder-class='placeholder-input' onblur="onMsgBlurEvent"></input>
+    </view>
+  </view>
+
+  <!--订单金额-->
+  <view class="money-container">
+    <view class="money-title">
+      <view style="font-weight:bold;color:#64c7f1">订单金额</view>
+      <view class="money">￥{{totalPrice}}</view>
+    </view>
+  </view>
+
+  <!--支付按钮-->
+  <view class="buy-body">
+    <view class="buy" bindtap='addOrderEvent'>去 支 付</view>
+  </view>
+</view>
+

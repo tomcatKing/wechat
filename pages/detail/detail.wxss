@@ -1,0 +1,168 @@
+/* pages/detail/detail.wxss */
+.header-group{
+  width:90%;
+  padding-top:30rpx;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom:20rpx;
+  border-bottom:1px solid #5cace2;
+}
+.header-group .header-item-img{
+  width:120rpx;
+  height:120rpx;
+}
+.header-group .header-food-img{
+  padding-left:50rpx;
+  flex:1;
+  height:320rpx;
+}
+.header-item-img image{
+  width:100%;
+  height:100%;
+  border-radius: 50rpx;
+}
+.header-food-img image{
+  border:1px solid #5cace2;
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+  border-radius: 10rpx;
+}
+.body-group{
+  width:90%;
+  padding-top:10rpx;
+  margin:0 auto;
+}
+.body-price{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom:10rpx;
+  box-sizing: border-box;
+  /* border-bottom:1px solid #5cace2; */
+}
+.body-type{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10rpx 0;
+  box-sizing: border-box;
+  border-bottom:14rpx solid #5cace2;
+}
+.body-price .inner-price{
+  font-size:52rpx;
+  color:#5cace2;
+}
+.body-price .inner-num{
+  font-size:26rpx;
+  color:#848484;
+}
+.body-type .inner-name{
+  font-size:40rpx;
+  font-weight: bold;
+}
+.body-type .inner-type{
+  font-size:20rpx;
+  color:#fff;
+}
+.inner-type text{
+  padding:8rpx 10rpx;
+  border-radius: 2rpx;
+  margin-left: 20rpx;
+  background-color: #5cace2;
+}
+.end-title{
+  width:90%;
+  padding:10rpx;
+  margin:0 auto;
+}
+.end-title .inner-title{
+  padding:20rpx 0;
+  font-size:32rpx;
+  font-weight: bold;
+}
+.end-title .inner-text{
+  font-size:28rpx;
+  color:#5cace2;
+}
+
+.pinlun{
+  width:90%;
+  padding-top:20rpx;
+  padding-bottom:100rpx;
+  margin:0 auto;
+}
+.pinlun .pinlun-title{
+  font-size: 32rpx;
+  font-weight: bold;
+  padding-bottom:20rpx;
+  border-bottom:1px solid #5cace2;
+}
+.comment-group{
+  display: flex;
+  justify-content: flex-start;
+  padding-top:40rpx;
+}
+
+.comment-group .left-comment{
+  width:70rpx;
+  margin-right: 20rpx;
+}
+
+.left-comment .avator{
+  width:70rpx;
+  height:70rpx;
+  border-radius: 50%;
+}
+
+.comment-group .right-comment{
+  flex:1;
+}
+
+.right-comment .username-rate{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.username-rate .username{
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+.ralease-time{
+  color:#b3b3b3;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.content{
+  font-size:26rpx;
+  color:#353535;
+  margin-top:10rpx;
+}
+
+/**购物车购买功能*/
+.cart-buy-body{
+  width:100%;
+  height:80rpx;
+  position:fixed;
+  bottom:0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-buy-body view{
+  flex-grow: 1;
+  line-height: 80rpx;
+  text-align: center;
+  font-size:30rpx;
+  color:#fff;
+}
+.cart-buy-body .cart-add{
+  background:#69bbe6;
+}
+.cart-buy-body .cart-buy{
+  background: #5cace2;
+}

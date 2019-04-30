@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/user/user",
+    "pages/order/order",
+    "pages/cart/cart",
+    "pages/ewm/ewm",
+    "pages/detail/detail",
+    "pages/menu/menu",
+    "pages/food/food",
+    "pages/login/login",
+    "pages/buy/buy",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#64c7f1",
+    "navigationBarTitleText": "哆啦A梦的美食之旅",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#fff",
+    "borderStyle": "white",
+    "backgroundColor": "#5cace2",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/tabbar/首页.png",
+        "selectedIconPath": "img/tabbar/首页(1).png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "iconPath": "img/tabbar/菜单.png",
+        "selectedIconPath": "img/tabbar/菜单(1).png",
+        "text": "菜单"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "img/tabbar/购物车.png",
+        "selectedIconPath": "img/tabbar/购物车(1).png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "img/tabbar/个人中心.png",
+        "selectedIconPath": "img/tabbar/个人中心(1).png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

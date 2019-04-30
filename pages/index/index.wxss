@@ -1,0 +1,107 @@
+/**index.wxss**/
+.swiper{
+  padding:20rpx;
+  display: flex;
+  height:300rpx;
+  background: white;
+  justify-content: center;
+}
+.swiper swiper-item{
+  width:94%;
+  height:100%;
+}
+.swiper image{
+  width:100%;
+  height:100%;
+  border-radius: 10rpx;
+}
+
+/**选择*/
+.select-title{
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+  height:110rpx;
+  padding-top:10rpx;  
+}
+.select-inner{
+  width:100rpx;
+  height:100rpx;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: space-around; 
+  border:1px solid #fff;
+}
+.select-title .select-inner image{
+  width:100%;
+  height:100%;
+  flex:1 0 auto;
+  border-radius: 50%;
+}
+.select-title .select-inner text{
+  font-weight: bold;
+}
+.title-text{
+  margin-top:30rpx;
+  text-align: center;
+  font-size:40rpx;
+  color:#a1a1a1;
+  font-weight: bold;
+}
+
+/**新品推荐*/
+.tuijian{
+  margin-top:30rpx;
+}
+.tuijian_content{
+  width:94%;
+  height:500rpx;
+  margin:0 auto;
+  padding-top:30rpx;
+  white-space: nowrap;
+}
+.tuijian_title{
+  width:100%;
+  padding-top:40rpx;
+  display: flex;
+  height:40rpx;
+  justify-content: space-between;
+}
+.tuijian_title >view{
+  padding:0 40rpx;
+}
+.tuijian_title >.small_title{
+  line-height: 40rpx;
+  font-weight: bold;
+}
+.tuijian_title >.all_tuijian{
+  color:#bbb;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.tuijain_content_inner{
+  display:inline-block;
+  padding:20rpx 0;
+  width:350rpx;  
+  text-align: center;
+  border:1px solid #fff;
+  box-sizing: border-box;
+}
+.tuijain_content_inner image{
+  width:80%;
+  height:360rpx;
+  padding:0rpx 30rpx;
+}
+.tuijain_content_inner text{
+  font-size:30rpx;
+  display: block;
+  width:350rpx;
+  font-weight: bold;
+  color:#4f585b;
+}
+
+.show{
+  border:1px solid #64c7f1;
+  
+}

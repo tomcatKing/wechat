@@ -1,0 +1,52 @@
+<view class="title-group">
+  <view class="image-group">
+    <image src="http://www.icosky.com/icon/png/Movie%20%26%20TV/Doraemon/smile.png"></image>
+  </view>
+  <view class="title-context">
+    <view class="top-title">
+      <text>美食の家</text>
+    </view>
+    <view class="body-title">
+      <text>包邮 | 3天内到达</text>
+    </view>
+    <view class="end-title">
+      <text>下单时间: 10:00 ~ 17:00</text>
+    </view>
+  </view>
+</view>
+
+<!--选择部分-->
+<view class="select-group">
+  <view class="select-item-list">
+    <text class="default-{{zh==1 ?'select':'hh'}}" bindtap="onSelectEvent" data-select="zh">综合排序</text>
+    <text class="default-{{jg==1 ?'select':'hh'}}" bindtap="onSelectEvent" data-select="jg">按价格</text>
+    <text class="default-{{xl==1 ?'select':'hh'}}" bindtap="onSelectEvent" data-select="xl">按销量</text>
+  </view>
+</view>
+
+<!--食物部分-->
+<view wx:if="{{foods}}">
+  <!--食物列表页,这里使用组件-->
+  <view wx:for="{{foods}}" wx:key="{{item.food_id}}" class="itemcontext">
+    <view class="item">
+      <view class="item-img">
+        <image src="{{item.food_img}}">
+        </image>
+      </view>
+      <view class="item-context">
+        <view class="item-title">{{item.food_name}}</view>
+        <view class="month-buy-num">月销{{item.food_count}}份</view>
+        <view class="buy-body">
+          <view class="buy-price">
+            <text class="money-flag">￥</text>{{item.food_price}}
+          </view>
+          <view class="buy-flag">
+            <view class="money-flag" bindtap='onBindEventComment' data-id="{{item.food_id}}" data-type="add"><image src="../../img/购物车.png"/></view>
+            <view class="money-flag" bindtap='onBindEventComment' data-id="{{item.food_id}}" data-type="detail"><image src="../../img/详情.png"/></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else class="food_style">找不到您想看的东西...</view>

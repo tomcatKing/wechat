@@ -1,0 +1,82 @@
+<!--pages/order/order.wxml-->
+<view hidden='{{show_detail}}'>
+  <view class="container">
+    <view class="{{all==1 ?'select-item':'hh'}}" bindtap='onSelectEvent' data-set="all">全部</view>
+    <view class="{{dfk==1 ?'select-item':'hh'}}" bindtap="onSelectEvent" data-set="dfk">待付款</view>
+    <view class="{{dfh==1 ?'select-item':'hh'}}" bindtap="onSelectEvent" data-set="dfh">待发货</view>
+    <view class="{{dsh==1 ?'select-item':'hh'}}" bindtap="onSelectEvent" data-set="dsh">待收货</view>
+  </view>
+
+  <!--订单详情-->
+  <view wx:if="{{orders}}">
+  <view  wx:for="{{orders}}" wx:key="{{item.order_no}}">
+    <view class="order-container">
+      <view class="order-item">
+        <view class="order-item-title">订单编号:{{item.order_no}}</view>
+        <view class="order-item-status">{{item.status_desc}}</view>
+      </view>
+
+      <view class="order-item-msg">
+        <view class="order-item-img">
+          <image src="{{item.imageHost}}"/>
+        </view>
+        <view class="order-item-name">
+          <view class="item-name">{{item.orderItemList[0].food_name}} </view>
+          <view class="item-status">口味:少糖 / 标准</view>
+        </view>
+        <view wx:if="{{item.status_desc!=='已取消'}}" class="order-del-img" bindtap='onDelEvent' data-id="{{item.order_no}}">
+          <image src="../../img/删除.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="order-desc">
+      <view class="inner-desc-context"></view>
+      <view class="inner-desc">共{{item.orderItemList.length}}件商品,共计:{{item.payment}}</view>
+    </view>
+    <view class="order-btn">
+      <view class="inner-btn-context"></view>
+      <view class="inner-btn">
+        <button class="inner-btn1" bindtap='onDetailEvent' data-id="{{item.order_no}}">订单详情</button>
+        <button wx:if="{{item.status_desc==='未支付'}}" class="inner-btn2" bindtap="onPayEvent" data-id="{{item.order_no}}">立即付款</button>
+      </view>
+    </view>
+  </view>
+  </view>
+
+  <view wx:else style="font-size:30rpx;padding-top:30rpx;color:#ccc;text-align:center">
+    您还没有这部分的相关订单信息哟!
+  </view>
+</view>
+
+<view hidden="{{!show_detail}}">
+  <view class="detail-head">
+    <view class="detail-title">订单信息</view>
+    <view class="detail-order-header">订单号: {{order.order_no}}</view>
+    <view class="detail-order-header">创建时间: {{order.create_time}}</view>
+    <view class="detail-order-header">收件人: {{order.shipping.receiver_name}} {{order.shipping.receiver_province}}省 {{order.shipping.receiver_city}}市 {{order.shipping.receiver_district}}区{{order.shipping.receiver_address}} {{order.shipping.receiver_phone}}</view>
+    <view class="detail-order-header">订单状态: {{order.status_desc}}</view>
+    <view class="detail-order-header">支付方式: {{order.payment_type}}</view>
+    <view class="detail-order-header">订单留言: {{order.order_desc}}</view>
+  </view>
+  <view class="detail-list">
+    <view class="detail-title-msg">商品清单</view>
+    <view class="detail-order-item" wx:for="{{order.orderItemList}}" wx:key="{{item.order_no}}" wx:for-item="myitem">
+      <view class="detail-order-img">
+        <image src="{{myitem.food_img}}"></image>
+      </view>
+      <view class="detail-order-desc">
+        <view class="order-txt">{{myitem.food_name}} x{{myitem.food_num}}</view>
+        <view class="order-total-price">￥{{myitem.food_price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="tatal-price">
+    订单总价:<text style="color:#fa103a">￥{{order.payment}}</text>
+  </view>
+
+  <view class="close-detail-btn">
+    <view bindtap="showDetailEvent">查看订单</view>
+  </view>
+</view>
+

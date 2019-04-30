@@ -1,0 +1,132 @@
+/* pages/food/food.wxss */
+.title-group{
+  width:100%;
+  padding:10rpx 60rpx;
+  display:flex;
+  background: #64c7f1;
+  justify-content: flex-start;
+}
+.title-group .image-group{
+  width:120rpx;
+  height:120rpx;
+}
+.title-group .image-group image{
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+}
+.title-group .title-context{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left:60rpx;
+}
+.title-context .top-title{
+  font-size: 36rpx;
+  color:#fff;
+}
+.title-context .body-title{
+  font-size:24rpx;
+  color:#fff;
+}
+.title-context .end-title{
+  font-size:24rpx;
+  color:#fff;
+}
+/**选择区域*/
+.select-group{
+  width:100%;
+  display: flex;
+  height:80rpx;
+  justify-content: center;
+  background: #fff;
+}
+.select-group .select-item-list{
+  width:94%;
+  height:60rpx;
+  margin-top:20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.select-item-list text{
+  width:200rpx;
+  text-align: center;
+  font-size:32rpx;
+}
+.default-select{
+  border-bottom:2px solid #64c7f1;
+  color:#64c7f1;
+  box-sizing: border-box;
+}
+.food_style{
+  padding-top:50rpx;
+  font-size:32rpx;
+  text-align: center;
+}
+
+
+/**食物列表*/
+/* components/fooditem/fooditem.wxss */
+.itemcontext{
+  width:100%;
+  padding-top:20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.item{
+  width:90%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid #ccc;
+}
+.item .item-img{
+  width:160rpx;
+  height:160rpx;
+}
+
+.item .item-img image{
+  width:100%;
+  height:100%;
+  border-radius: 10rpx;
+}
+
+.item .item-context{
+  padding-left:40rpx;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item-context .item-title{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.item-context .month-buy-num{
+  padding-top:8rpx;
+  font-size:22rpx;
+  font-weight: bold;
+  color:rgba(44, 39, 39, 0.815);
+}
+.item-context .buy-body{
+  display: flex;
+  justify-content: space-between;
+}
+.item-context .buy-price{
+  padding-top:8rpx;
+  color:#fc5063;
+  font-weight: bold;
+}
+.buy-flag{
+  display:flex;
+  justify-content: center;
+}
+.buy-flag .money-flag{
+  width:60rpx;
+  height:60rpx;
+  padding-right:30rpx;
+}
+.money-flag image{
+  width:100%;
+  height:100%;
+}

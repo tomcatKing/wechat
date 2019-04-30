@@ -1,0 +1,30 @@
+/* pages/login/login.wxss */
+.login{
+  width:60%;
+  margin:200rpx auto;
+  height:600rpx;
+}
+.header{
+  width:200rpx;
+  height:200rpx;
+  margin:0 auto;
+}
+.header image{
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+}
+.body{
+  padding-top:30rpx;
+  width:400rpx;
+  margin:0 auto;
+  text-align: center;
+  font-size:28rpx;
+}
+.end{
+  padding-top:60rpx;
+  width:100%;
+  height:60rpx;
+  display: flex;
+  justify-content: center;
+}

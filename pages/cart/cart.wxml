@@ -1,0 +1,50 @@
+<view wx:if="{{carts}}">
+  <view class="container" wx:for="{{carts}}" wx:key="item.cart_id">
+    <view class="cart">
+      <!--选择部分-->
+      <view class="select" data-status="{{item.status}}" data-id="{{item.cart_id}}" bindtap='onSelectEvent'>
+        <icon wx:if="{{item.status==0}}"type="success" size="25" color="#ccc"/>
+        <icon wx:else type="success" size="25" color="#5cace2"/>
+      </view>
+
+      <!--物品-->
+      <view class="cart-body">
+        <view class="order-image">
+          <image src="{{item.food_img}}"/>
+        </view>
+
+        <!--名称,价格,数量-->
+        <view class="cart-context">
+          <view class="inner-name">{{item.food_name}}</view>
+          <view class="inner-price">￥{{item.food_price}}</view>
+          <view class="select-body">
+            <view bindtap="onUpdateNumEvent" data-type="del" data-id="{{item.cart_id}}">-</view>
+            <view class="select-num">{{item.food_num}}</view>
+            <view bindtap="onUpdateNumEvent" data-type="add" data-id="{{item.cart_id}}">+</view>
+          </view>
+        </view>
+      </view>
+
+      <!--删除订单-->
+      <view class="del-order" bindtap="deleteCart" data-id="{{item.food_id}}">
+        <image src="../../img/删除.png"/>
+      </view>
+    </view>
+  </view>
+
+  <!--购物车全选,购买-->
+  <view class="buy-play">
+    <view class="buy-select" bindtap="onSelectsEvent">
+      <view class="buy-select-img">
+        <icon wx:if="{{totalStatus==0}}" type="success" color="#ccc" size="20"/>
+        <icon wx:else type="success" size="20" color="#5cace2"/>
+      </view>
+      <view>全选</view>
+    </view>
+    <view class="buy-msg">
+      合计:<text class="count-money">￥{{totalPrice}}</text>元
+    </view>
+    <view class="buy-btn" bindtap='onBuyEvent'>购买商品</view>
+  </view>
+</view>
+<view wx:else style="text-align:center;padding-top:30rpx;font-size:30rpx">您的购物车空空如也...</view>

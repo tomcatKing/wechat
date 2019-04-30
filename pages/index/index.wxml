@@ -1,0 +1,28 @@
+<swiper class='swiper' autoplay indicator-dots indicator-color='#fff' indicator-active-color='#64c7f1'>
+  <swiper-item wx:for="{{imgs}}" wx:key="*this">
+    <image src='{{item}}'></image>
+  </swiper-item>
+</swiper>
+
+<!--选择部分-->
+<view class="select-title">
+  <view bindtap="onBindEvent" hover-stay-time="50" class="select-inner" wx:for="{{selectContext}}" wx:key="{{item.name}}" data-url="{{item.url}}">
+    <image src="{{item.img}}"></image>
+    <text style="font-size:20rpx;color:#bbb;">{{item.name}}</text>
+  </view>
+</view>
+
+<!--标题部分-->
+<view class="tuijian">
+  <view class="tuijian_title">
+    <view class="small_title">美食推荐</view>
+    <view bindtap="onBindEvent" hover-class="none" class="all_tuijian" data-url="/pages/food/food">查看全部</view>
+  </view>
+  <!--具体内容-->
+  <scroll-view class="tuijian_content" scroll-x="{{true}}">
+    <view  hover-stay-time="50" hover-class="show" wx:for="{{itemdatas}}" wx:key="{{item.moreurl}}" class="tuijain_content_inner" bindtap="onBindEvent" data-url="{{item.moreurl}}">
+      <image src="{{item.img}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+</view>

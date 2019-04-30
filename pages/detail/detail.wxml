@@ -1,0 +1,93 @@
+<view class="container">
+  <view class="header-group">
+    <view class="header-item-img">
+      <image src="http://www.icosky.com/icon/png/Movie%20%26%20TV/Doraemon/joy.png"/>
+    </view>
+    <view class="header-food-img">
+      <image src="{{food.food_img}}"/>
+    </view>
+  </view>
+
+  <!--美食详情-->
+  <view class="body-group">
+    <!--价格部分-->
+    <view class="body-price">
+      <view class="inner-price">{{food.food_price}}元/份</view>
+      <view class="inner-num">月销{{food.food_count}}份</view>
+    </view>
+
+    <!--名称类型-->
+    <view class="body-type">
+      <view class="inner-name">{{food.food_name}}</view>
+      <view class="inner-type">
+        <text>甜密美味</text>
+        <text>回味无求</text>
+      </view>
+    </view>
+  </view>
+
+  <!--商品说明-->
+  <view class="end-title">
+    <view class="inner-title">美食信息</view>
+    <view class="inner-text">
+      {{food.food_detail}}
+    </view>
+  </view>
+</view>
+
+<!--评论部分-->
+<view class="pinlun">
+  <view class="pinlun-title">小伙伴的评论</view>
+  <view class="pinlun-body">
+    <view class="comment-group">
+      <view class="left-comment">
+        <image class="avator" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553961173276&di=6f77d98d7dabf9d1c5b19d994f81102c&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F4cab8b47dac5c0b8286ddf65dabf7730c54016d0.jpg"></image>
+      </view>
+      <view class="right-comment">
+        <view class="username-rate">
+          <text class="username">芜湖大司马</text>
+        </view>
+        <view class="ralease-time">2019-18-12 11:12:12</view>
+        <view class="content">
+          哇，这个人真是石乐志啊，先不急，往后拉，他过来反手大招，哎很舒服。
+        </view>
+      </view>
+    </view>
+
+    <view class="comment-group">
+      <view class="left-comment">
+        <image class="avator" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553960912306&di=b444b632ae7e2a5cf23b4a55cf6f7ecb&imgtype=0&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201504%2F30%2F20150430192355_yvYPK.thumb.224_0.jpeg"></image>
+      </view>
+      <view class="right-comment">
+        <view class="username-rate">
+          <text class="username">蜡笔的小新</text>
+        </view>
+        <view class="ralease-time">2019-18-12 11:12:12</view>
+        <view class="content">
+          如果有来生，我要当条被子，不是躺在床上就是在晒太阳！
+        </view>
+      </view>
+    </view>
+
+    <view class="comment-group">
+      <view class="left-comment">
+        <image class="avator" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553960912306&di=b444b632ae7e2a5cf23b4a55cf6f7ecb&imgtype=0&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201504%2F30%2F20150430192355_yvYPK.thumb.224_0.jpeg"></image>
+      </view>
+      <view class="right-comment">
+        <view class="username-rate">
+          <text class="username">蜡笔的小新</text>
+        </view>
+        <view class="ralease-time">2019-18-12 11:12:12</view>
+        <view class="content">
+          如果有来生，我要当条被子，不是躺在床上就是在晒太阳！
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--加入购物车,立即购买-->
+<view class="cart-buy-body">
+  <view class="cart-add" bindtap='onBindEvent' data-set="add">加入购物车</view>
+  <view class="cart-buy" bindtap='onBindEvent' data-set="buy">立即购买</view>
+</view>

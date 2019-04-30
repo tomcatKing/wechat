@@ -1,0 +1,12 @@
+<!--授权登录页面-->
+<view class="login">
+  <view class="header">
+    <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2038774773,2260990174&fm=26&gp=0.jpg"/>
+  </view>
+  <view class="body">
+    <view class="context">为保证小程序的正常运行,请点击授权</view>
+  </view>
+  <view class="end">
+    <button type="primary" size="mini" open-type='getUserInfo' bindgetuserinfo="getUser">授权登录</button>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<searchbar isnavigator="{{false}}" bindsearchinput="onSearchInputEvent"></searchbar>
+
+<!--显示搜索的结果-->
+<view class="item-list-group">
+  <view class="item-group" wx:for="{{subjects}}" wx:key="{{item.food_id}}" bindtap='onItemTapEvent'
+    data-id="{{item.food_id}}" data-title="{{item.food_name}}">
+    <image src="{{item.food_img}}" class="thumbnail"></image>
+    <view class="info-group">
+      <view class="title">{{item.food_name}}</view>
+      <view class="rate-year">{{item.food_price}}元/份</view>
+    </view>
+  </view>
+</view>

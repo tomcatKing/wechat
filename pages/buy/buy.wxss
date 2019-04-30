@@ -1,0 +1,173 @@
+/* pages/buy/buy.wxss */
+.edit-c-address{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  padding-top:100rpx;
+}
+.section{
+  width:600rpx;
+}
+.picker-text text{
+  padding:0 20rpx;
+}
+.section__title{
+  padding:30rpx 0;
+  text-align: center;
+  font-weight: bold;
+  color:#5cace2;
+}
+.item-receiver-name{
+  width:100%;
+  height:140rpx;
+  margin-top:20rpx;
+  box-sizing: border-box;
+  border:2px solid #027af6;
+}
+.inner-receiver-name{
+  width:100%;
+  padding:10rpx 20rpx;
+  box-sizing: border-box;
+  font-size:36rpx;
+  color:#fff;
+  background: #027af6;
+}
+.inner-name-input input{
+  padding-left:20rpx;
+}
+.inner-name-input{
+  padding:10rpx 0;
+  height:40rpx;
+  font-size:30rpx;
+}
+.item-receiver-button{
+  width:180rpx;
+  margin:30rpx auto;
+  text-align: center;
+  font-size:30rpx;
+  padding:20rpx 20rpx;
+  background: #027af6;
+  color:#fff;
+}
+
+/**body**/
+.header-container{
+  width:100%;
+}
+.header-container .header-buy-title{
+  padding:20rpx 40rpx;
+  font-size:30rpx;
+  color:#64c7f1;
+  font-weight: bold;
+  border-bottom:2px solid #eee;
+}
+.header-container .header-cart-body{
+  padding:20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.header-cart-body .cart-msg{
+  display: flex;
+  justify-content: space-between;
+  width:500rpx;
+  height:180rpx;
+}
+.cart-msg .cart-image{
+  width:160rpx;
+  height:180rpx;
+}
+.cart-msg .cart-name{
+  flex:1;
+  font-size:30rpx;
+  padding:30rpx 30rpx;
+}
+.cart-name .cart-price{
+  color:#c70023;
+}
+.cart-image image{
+  width:100%;
+  height:100%;
+}
+.header-cart-body .cart-buy-num{
+  padding: 30rpx 0;
+
+}
+
+.body-container{
+  border-top:10rpx solid #eee;
+}
+.body-container .body-address-title{
+  padding:20rpx 40rpx;
+  font-size:30rpx;
+  color:#64c7f1;
+  font-weight: bold;
+  /* border-bottom:1px solid #eee; */
+}
+.body-container .body-address{
+  padding:20rpx 40rpx;
+  font-size:30rpx;
+  border-bottom:2px solid #eee;
+}
+.body-address .address{
+  display: flex;
+  padding:10rpx 10rpx;
+  justify-content: space-between;
+  align-items: center;
+  border:1px solid #eee;
+  margin-bottom:5px;
+}
+.body-address .add-address-btn{
+  margin-top:10rpx;
+  display: flex;
+  justify-content: center;
+}
+.update-address{
+  width:42rpx;
+  height:50rpx;
+}
+.delete-address{
+  width:50rpx;
+  height:50rpx;
+}
+.delete-address image{
+  width:100%;
+  height:100%;
+}
+.update-address image{
+  width:100%;
+  height:100%;
+}
+.view-address{
+  width:500rpx;
+  font-size:30rpx;
+}
+.money-container{
+  border-top:10rpx solid #eee;
+  margin-bottom:150rpx;
+}
+.money-container .money-title{
+  padding:20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size:30rpx;
+  align-items: center;
+}
+.money-title .money{
+  color:#c70023;
+}
+
+.buy-body{
+  width:100%;
+  height:80rpx;
+  position:fixed;
+  bottom:0px;
+  display: flex;
+  align-items: center;
+}
+.buy{
+  flex:1;
+  padding:20rpx 0;
+  color:#fff;
+  text-align: center;
+  background: #48c23d;
+}

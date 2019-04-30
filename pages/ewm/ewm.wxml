@@ -1,0 +1,23 @@
+<!--pages/ewm/ewm.wxml-->
+<view class="ts">
+  <view class="inner_ts">
+    由于个人小程序不支持开通微信支付,所以只能使用支付宝支付.另外,
+    所有商品均为虚拟商品,且不会有真实的交易产生!!<view style="color:#d3422b">(请使用沙箱版支付宝完成支付动作)</view>
+  </view>
+</view>
+
+<view class="body" wx:if="{{order_status==10}}">
+  <view class="body_title">订单提交成功,请尽快支付!订单号:98412491249172482</view>
+  <view class="body_title2">使用支付宝扫码支付</view>
+  <view class="ewm">
+    <image src="{{qrPath}}"></image>
+  </view>
+</view>
+
+<view class="success" wx:else>
+  <view class="success-title">支付成功!!</view>
+  <view class="success-menu">
+    <view bindtap="switchTab" data-url="/pages/index/index">返回首页</view>
+    <view bindtap="switchTab" data-url="/pages/menu/menu">继续购物</view>
+  </view>
+</view>

@@ -1,0 +1,86 @@
+/* pages/user/user.wxss */
+.header-container{
+  width:100%;
+  padding: 40rpx 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #64c7f1;
+}
+.header-container .user-body{
+ width:120rpx;
+ height:120rpx;
+}
+.user-body image{
+  border:2px solid #eee;
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+}
+.header-container .user-name{
+  flex:1;
+  padding-left: 40rpx;
+  font-size:32rpx;
+  color:#fff;
+}
+
+.order-container{
+  width:100%;
+  padding: 20rpx 40rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom:4rpx solid #ccc;
+  font-size:30rpx;
+}
+.order-container .order-title{
+  width:200rpx;
+}
+.order-container .order-other{
+  display: flex;
+  justify-content: center;
+  width:200rpx;
+  padding-right: 20rpx;
+}
+.order-other .order-text{
+  color:#ccc;
+}
+.order-other image{
+  width:36rpx;
+  height:40rpx;
+}
+
+.select-container{
+  padding:10rpx 0;
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom:6rpx solid #ccc;
+}
+.select-item{
+  width:120rpx;
+  height:120rpx;
+  font-size:30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.select-item image{
+  width:60rpx;
+  height:60rpx;
+}
+
+.context{
+  width:100%;
+  height:100rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color:#aaa;
+}
+.inner-context{
+  line-height: 50rpx;
+  margin:40rpx auto;
+  width:80%;
+  text-align: center;
+}
